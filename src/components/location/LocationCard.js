@@ -10,6 +10,7 @@ const LocationCard = props => {
         <address>
           Visit Us at the {props.location.name} location.
         </address>
+        <button type="submit" onClick={() => props.deleteLocation(props.location.id)}>Remove location</button>
       </div>
     </div>
   );

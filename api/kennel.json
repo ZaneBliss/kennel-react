@@ -1,22 +1,46 @@
 {
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Decker", "breed": "German Shepherd" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ],
-    "employees": [
-        { "id": 1, "name": "Dan Jameson" },
-        { "id": 2, "name": "Susan Rigby" },
-        { "id": 3, "name": "John Applestore" }
-    ],
-    "owners": [
-        { "id": 1, "name": "John Hamboning", "phoneNumber": "615-993-0003" },
-        { "id": 2, "name": "Sam Guptra", "phoneNumber": "615-334-3220" },
-        { "id": 3, "name": "Mac Demo", "phoneNumber": "615-994-2233" }
-    ],
-    "locations": [
-        { "id": 1, "name": "Nashville North, 504 Puppy Way"},
-        { "id": 2, "name": "Nashville South, 1204 Green Drive"},
-        { "id": 3, "name": "Nashville West, 125 Corner Street"}
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Shepherd"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Dan Jameson"
+    },
+    {
+      "id": 2,
+      "name": "Susan Rigby"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "John Hamboning",
+      "phoneNumber": "615-993-0003"
+    },
+    {
+      "id": 3,
+      "name": "Mac Demo",
+      "phoneNumber": "615-994-2233"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North, 504 Puppy Way"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South, 1204 Green Drive"
+    }
+  ]
 }

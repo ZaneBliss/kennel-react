@@ -8,11 +8,12 @@ const OwnerCard = props => {
                     <img src={require("./owner.png")} alt="Pet owner" />
                 </picture>
                 <h3>
-                    Name: {props.owner.name}
+                    {props.owner.name}
                 </h3>
                 <p>
                     Phone number: {props.owner.phoneNumber}
                 </p>
+                <button type="submit" onClick={() => props.deleteOwner(props.owner.id)}>Remove owner</button>
             </div>
         </div>
     )
