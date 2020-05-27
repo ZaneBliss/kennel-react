@@ -15,8 +15,8 @@
         { "id": 3, "name": "Mac Demo", "phoneNumber": "615-994-2233" }
     ],
     "locations": [
-        { "id": 1, "name": "Nashville North"},
-        { "id": 2, "name": "Nashville South"},
-        { "id": 3, "name": "Nashville West"}
+        { "id": 1, "name": "Nashville North, 504 Puppy Way"},
+        { "id": 2, "name": "Nashville South, 1204 Green Drive"},
+        { "id": 3, "name": "Nashville West, 125 Corner Street"}
     ]
 }

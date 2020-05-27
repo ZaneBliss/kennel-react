@@ -1,6 +1,6 @@
 import React from "react";
 
-const EmployeeCard = () => {
+const EmployeeCard = props => {
   return (
     <div className="card">
       <div className="card-content">
@@ -8,10 +8,8 @@ const EmployeeCard = () => {
             <img src={require("./employee.png")} alt="Employee" />
         </picture>
           <h3>
-              Employee Name
+              {props.employee.name}
           </h3>
-          <p>Hired on: date</p>
-          <p>Location: location</p>
       </div>
     </div>
   );

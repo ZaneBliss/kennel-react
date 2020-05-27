@@ -1,6 +1,6 @@
 import React from "react";
 
-const LocationCard = () => {
+const LocationCard = props => {
   return (
     <div className="card">
       <div className="card-content">
@@ -8,9 +8,7 @@ const LocationCard = () => {
           <img src={require("./location.jpg")} alt="Business location" />
         </picture>
         <address>
-          Visit Us at the Nashville North Location
-          <br />
-          500 Puppy Way
+          Visit Us at the {props.location.name} location.
         </address>
       </div>
     </div>
