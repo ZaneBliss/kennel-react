@@ -4,11 +4,6 @@
       "id": 1,
       "name": "Doodles",
       "breed": "Poodle"
-    },
-    {
-      "id": 2,
-      "name": "Decker",
-      "breed": "German Shepherd"
     }
   ],
   "employees": [
@@ -37,10 +32,6 @@
     {
       "id": 1,
       "name": "Nashville North, 504 Puppy Way"
-    },
-    {
-      "id": 2,
-      "name": "Nashville South, 1204 Green Drive"
     }
   ]
 }

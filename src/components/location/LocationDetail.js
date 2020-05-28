@@ -3,6 +3,7 @@ import LocationManager from '../../modules/LocationManager';
 
 const LocationDetail = props => {
   const [location, setLocation] = useState({ name: "" });
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     LocationManager.get(props.locationId)
@@ -10,8 +11,16 @@ const LocationDetail = props => {
         setLocation({
           name: location.name,
         });
+        setIsLoading(false)
       });
   }, [props.locationId]);
+
+  const handleDelete = () => {
+    setIsLoading(true);
+    LocationManager.delete(props.locationId).then(() => {
+      props.history.push("/locations")
+    })
+  }
 
   return (
     <div className="card">
@@ -22,6 +31,7 @@ const LocationDetail = props => {
         <address>
           Visit Us at the {location.name} location.
         </address>
+        <button disabled={isLoading} onClick={handleDelete}>Close location</button>
       </div>
     </div>
   );
