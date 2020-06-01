@@ -9,7 +9,7 @@ const LocationCard = props => {
           <img src={require("./location.jpg")} alt="Business location" />
         </picture>
         <address>
-          Visit Us at the {props.location.name} location.
+          Visit Us at the {props.location.name} {props.location.address} location.
         </address>
         <button type="submit" onClick={() => props.deleteLocation(props.location.id)}>Remove location</button>
         <Link to={`/locations/${props.location.id}`}>

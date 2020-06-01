@@ -3,11 +3,15 @@ import React from "react";
 import Home from "./home/Home";
 //only include these once they are built - previous practice exercise
 import AnimalList from "../modules/animal/AnimalList";
-import AnimalDetail from "./animal/AnimalDetail"
+import AnimalDetail from "./animal/AnimalDetail";
+import AnimalForm from "./animal/AnimalForm";
 import EmployeeList from "../modules/employee/EmployeeList";
+import EmployeeForm from "./employee/EmployeeForm"
 import OwnerList from "../modules/owner/OwnerList";
+import OwnerForm from "../components/owner/OwnerForm"
 import LocationList from "../modules/locations/LocationList";
-import LocationDetail from "./location/LocationDetail"
+import LocationDetail from "./location/LocationDetail";
+import LocationForm from "./location/LocationForm";
 
 const ApplicationViews = () => {
   return (
@@ -23,7 +27,7 @@ const ApplicationViews = () => {
         exact
         path="/animals"
         render={(props) => {
-          return <AnimalList />;
+          return <AnimalList {...props} />;
         }}
       />
       <Route
@@ -31,38 +35,66 @@ const ApplicationViews = () => {
         render={(props) => {
           // Pass the animalId to the AnimalDetailComponent
           return (
-            <AnimalDetail animalId={parseInt(props.match.params.animalId)} 
+            <AnimalDetail
+              animalId={parseInt(props.match.params.animalId)}
               {...props}
             />
           );
         }}
       />
       <Route
-        exact path="/locations"
+        path="/animals/new"
         render={(props) => {
-          return <LocationList />;
+          return <AnimalForm {...props} />;
+        }}
+      />
+      <Route
+        exact
+        path="/locations"
+        render={(props) => {
+          return <LocationList {...props} />;
         }}
       />
       <Route
         path="/locations/:locationId(\d+)"
         render={(props) => {
           return (
-            <LocationDetail locationId={parseInt(props.match.params.locationId)} 
+            <LocationDetail
+              locationId={parseInt(props.match.params.locationId)}
               {...props}
             />
           );
         }}
       />
       <Route
-        path="/owners"
+        path="/locations/new"
         render={(props) => {
-          return <OwnerList />;
+          return <LocationForm {...props} />;
         }}
       />
       <Route
-        path="/employees"
+        exact
+        path="/owners"
         render={(props) => {
-          return <EmployeeList />;
+          return <OwnerList {...props}/>;
+        }}
+      />
+      <Route
+        path="/owners/new"
+        render={(props) => {
+          return <OwnerForm {...props} />;
+        }}
+      />
+      <Route
+        exact path="/employees"
+        render={(props) => {
+          return <EmployeeList {...props} />;
+        }}
+      />
+      <Route
+        path="/employees/new"
+        render={(props) => {
+          return <EmployeeForm {...props} />;
         }}
       />
     </React.Fragment>

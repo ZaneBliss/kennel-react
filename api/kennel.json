@@ -12,8 +12,8 @@
       "name": "Dan Jameson"
     },
     {
-      "id": 2,
-      "name": "Susan Rigby"
+      "name": "John Beal",
+      "id": 2
     }
   ],
   "owners": [
@@ -26,12 +26,23 @@
       "id": 3,
       "name": "Mac Demo",
       "phoneNumber": "615-994-2233"
+    },
+    {
+      "name": "Zane Bliss",
+      "phoneNumber": "444444444",
+      "id": 4
     }
   ],
   "locations": [
     {
       "id": 1,
-      "name": "Nashville North, 504 Puppy Way"
+      "name": "Nashville North",
+      "address": "504 Puppy Way"
+    },
+    {
+      "name": "John Beal",
+      "address": "123 Green Lane",
+      "id": 2
     }
   ]
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect }  from 'react';
 import OwnerCard from '../../components/owner/OwnerCard'
 import OwnerManager from '../OwnerManager'
 
-const OwnerList = () => {
+const OwnerList = (props) => {
     const [owners, setOwners] = useState([]);
 
     const getOwners = () => {
@@ -20,6 +20,14 @@ const OwnerList = () => {
     }, [])
 
     return (
+        <>
+        <section className="section-content">
+            <button type="button"
+            className="btn"
+            onClick={() => {props.history.push("/owners/new")}}>
+            New owner
+            </button>
+        </section>
         <div className="container-cards">
             {owners.map(owner => <OwnerCard 
             key={owner.id}
@@ -27,6 +35,7 @@ const OwnerList = () => {
             deleteOwner={deleteOwner}
              />)}
         </div>
+    </>
     )
 }
 
