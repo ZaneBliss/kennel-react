@@ -17,9 +17,10 @@ const LocationList = (props) => {
   };
 
   useEffect(() => {
-    getLocations();
+    getLocations()
   }, []);
 
+  
   return (
     <>
       <section className="section-content">
@@ -33,11 +34,13 @@ const LocationList = (props) => {
         </button>
       </section>
       <div className="container-cards">
-        {locations.map((location) => (
-          <LocationCard
-            key={location.id}
-            location={location}
+        {
+          locations.map((loc) => (
+      <LocationCard
+            key={loc.id}
+            loc={loc}
             deleteLocation={deleteLocation}
+            {...props}
           />
         ))}
       </div>

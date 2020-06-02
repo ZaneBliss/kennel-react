@@ -13,6 +13,7 @@ const OwnerCard = props => {
                 <p>
                     Phone number: {props.owner.phoneNumber}
                 </p>
+                <button type="button" onClick={() => props.history.push(`/owners/${props.owner.id}/edit`)}>Edit</button>
                 <button type="submit" onClick={() => props.deleteOwner(props.owner.id)}>Remove owner</button>
             </div>
         </div>

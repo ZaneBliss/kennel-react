@@ -4,23 +4,50 @@
       "id": 1,
       "name": "Doodles",
       "breed": "Poodle"
+    },
+    {
+      "name": "Circe",
+      "breed": "Cheeser",
+      "employeeId": "1",
+      "id": 2
+    },
+    {
+      "name": "Mimi",
+      "breed": "Corg",
+      "employeeId": "2",
+      "id": 3
+    },
+    {
+      "name": "Tone",
+      "breed": "Pitt",
+      "employeeId": "1",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Spork",
+      "breed": "Dark"
     }
   ],
   "employees": [
     {
       "id": 1,
-      "name": "Dan Jameson"
+      "name": "Jack Simpleston"
     },
     {
-      "name": "John Beal",
-      "id": 2
+      "id": 2,
+      "name": "Don Smeal"
+    },
+    {
+      "name": "Hammy Jorgenson",
+      "id": 3
     }
   ],
   "owners": [
     {
       "id": 1,
-      "name": "John Hamboning",
-      "phoneNumber": "615-993-0003"
+      "name": "Ron Hamboning",
+      "phoneNumber": "931-993-0003"
     },
     {
       "id": 3,
@@ -36,8 +63,8 @@
   "locations": [
     {
       "id": 1,
-      "name": "Nashville North",
-      "address": "504 Puppy Way"
+      "name": "Huntsville",
+      "address": "50 South Haven Dr"
     },
     {
       "name": "John Beal",

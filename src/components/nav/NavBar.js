@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { withRouter, NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -13,29 +13,29 @@ const NavBar = () => {
       <nav>
         <ul className="container">
           <li>
-            <Link className="nav-link" to="/">
+            <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="nav-link" to="/animals">
+            <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/animals">
               Animals
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="nav-link" to="/locations">
+            <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/locations">
               Locations
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="nav-link" to="/owners">
+            <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/owners">
               Owners
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link className="nav-link" to="/employees">
+            <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/employees">
                 Employee
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -43,4 +43,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default withRouter(NavBar);
