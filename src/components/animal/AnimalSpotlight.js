@@ -12,7 +12,7 @@ const AnimalSpotlight = props => {
         breed: animal.breed
       });
     });
-  }, [props.animald]);
+  }, [props.animalId]);
 
   return (
     <div className="animal-spotlight">
