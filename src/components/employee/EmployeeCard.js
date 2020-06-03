@@ -5,13 +5,14 @@ const EmployeeCard = props => {
     <div className="card">
       <div className="card-content">
         <picture>
-            <img src={require("./employee.png")} alt="Employee" />
+          <img src={require("./employee.png")} alt="Employee" />
         </picture>
-          <h3>
-              {props.employee.name}
-          </h3>
-          <button type="button" onClick={() => props.history.push(`/employees/${props.employee.id}/edit`)}>Edit</button>
-          <button type="button" onClick={() => props.deleteEmployee(props.employee.id) }>Fire employee</button>
+        <h3>
+          {props.employee.name}
+        </h3>
+        <button type="button" onClick={() => { props.history.push(`/employees/${props.employee.id}`) }}>Details</button>
+        <button type="button" onClick={() => props.history.push(`/employees/${props.employee.id}/edit`)}>Edit</button>
+        <button type="button" onClick={() => props.deleteEmployee(props.employee.id)}>Fire employee</button>
       </div>
     </div>
   );

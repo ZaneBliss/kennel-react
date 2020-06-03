@@ -1,3 +1,5 @@
+import AnimalManager from '../modules/AnimalManager'
+
 export function firstLetterCase(str) {
     return (str.charAt(0).toUpperCase() + str.slice(1));
  }
@@ -6,8 +8,8 @@ export function firstLetterCase(str) {
      return arr.join(" and ");
  }
 
- export function handleFieldChange = (evt, object, setItem) => {
-    const stateToChange = { ...object };
-    stateToChange[evt.target.id] = evt.target.value;
-    setItem(stateToChange);
-  };
+ export const handleDelete = (id, props, apiManager, url) => {
+    apiManager.delete(id).then(() =>
+      props.history.push(`${url}`)
+    );
+};

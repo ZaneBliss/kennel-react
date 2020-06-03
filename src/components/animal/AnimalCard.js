@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Animal.css";
+import { handleDelete } from '../../modules/helper'
+import AnimalManager from "../../modules/AnimalManager";
 
 const AnimalCard = (props) => {
   return (
@@ -24,7 +26,7 @@ const AnimalCard = (props) => {
         </Link>
         <button
           type="button"
-          onClick={() => props.deleteAnimal(props.animal.id)}
+          onClick={() => handleDelete(props.animal.id, props, AnimalManager, '/animals')}
         >
           Discharge
         </button>

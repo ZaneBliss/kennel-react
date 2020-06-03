@@ -7,14 +7,16 @@ const AnimalDetail = (props) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (animal.id === undefined) {
+    if (props.animalId === undefined) {
       props.history.push("/404")
     }
     //get(id) from AnimalManager and hang on to the data; put it into state
-    setAnimal({
-      name: animal.name,
-      breed: animal.breed,
-    });
+    AnimalManager.get(props.animalId).then(animal => 
+      setAnimal({
+        name: animal.name,
+        breed: animal.breed,
+      })
+    )
     setIsLoading(false);
   }, [props.animalId]);
 
