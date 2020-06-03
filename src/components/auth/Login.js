@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 
 const Login = (props) => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
-  const [checked, setChecked] = useState([]);
   const [disabled, setDisabled] = useState(true);
   const email = useRef();
   const password = useRef();
+  
 
   // Update state whenever an input field is edited
   const handleFieldChange = (evt) => {
@@ -19,8 +19,6 @@ const Login = (props) => {
     }
   };
 
-  
-
   const handleLogin = (event) => {
     event.preventDefault();
     /*
@@ -29,25 +27,20 @@ const Login = (props) => {
         ...Let's just trust the user... That's a good idea, right????
     */
 
-    if (!checked) {
-      sessionStorage.setItem("credentials", JSON.stringify(credentials));
-      props.history.push("/");
-    } else if (checked) {
-      localStorage.setItem("credentials", JSON.stringify(credentials));
-      props.history.push("/");
-    }
+    props.setUser(credentials, props.checked)
+    props.history.push('/')
   };
 
   const updateChecked = () => {
-    if (checked) {
-      setChecked(false);
-    } else if (!checked) {
-      setChecked(true);
+    if (props.checked) {
+      props.setChecked(false);
+    } else if (!props.checked) {
+      props.setChecked(true);
     }
   };
 
   useEffect(() => {
-    setChecked(false);
+    props.setChecked(false);
   }, [credentials]);
 
   return (

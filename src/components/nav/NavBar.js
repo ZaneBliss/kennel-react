@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter, NavLink } from "react-router-dom";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <header>
       <h1 className="site-title">
@@ -17,24 +17,35 @@ const NavBar = () => {
               Home
             </NavLink>
           </li>
-          <li>
+          {props.hasUser
+          ? <li>
             <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/animals">
               Animals
             </NavLink>
           </li>
+          : null}
           <li>
             <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/locations">
               Locations
             </NavLink>
           </li>
-          <li>
+          {props.hasUser
+          ? <li>
             <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/owners">
               Owners
             </NavLink>
           </li>
-          <li>
+          : null}
+          {props.hasUser
+          ? <li>
             <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/employees">
                 Employee
+            </NavLink>
+          </li>
+          : null}
+          <li>
+            <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/login">
+              Login
             </NavLink>
           </li>
         </ul>
