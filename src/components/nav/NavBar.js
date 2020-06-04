@@ -3,6 +3,13 @@ import { withRouter, NavLink } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = (props) => {
+
+  const handleLogout = () => {
+    props.clearUser();
+    props.history.push('/')
+  }
+
+
   return (
     <header>
       <h1 className="site-title">
@@ -43,11 +50,15 @@ const NavBar = (props) => {
             </NavLink>
           </li>
           : null}
-          <li>
+          {props.hasUser 
+          ? <li>
+            <span activeStyle={{ color: "gold" }} className="nav-link" onClick={handleLogout}> Logout </span>
+          </li>
+          : <li>
             <NavLink exact activeStyle={{ color: "gold" }} className="nav-link" to="/login">
               Login
             </NavLink>
-          </li>
+          </li>}
         </ul>
       </nav>
     </header>

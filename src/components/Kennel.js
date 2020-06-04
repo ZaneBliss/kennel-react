@@ -10,6 +10,11 @@ const Kennel = () => {
     } else return false
   }
 
+  const clearUser = () => {
+    sessionStorage.clear();
+    setHasUser(isAuthenticated());
+  }
+
   const [hasUser, setHasUser] = useState(isAuthenticated());
   const [checked, setChecked] = useState(true)
 
@@ -25,7 +30,7 @@ const Kennel = () => {
 
   return (
     <>
-      <NavBar hasUser={hasUser} />
+      <NavBar hasUser={hasUser} clearUser={clearUser}/>
       <ApplicationViews hasUser={hasUser} setUser={setUser} checked={checked} setChecked={setChecked} />
     </>
   );
